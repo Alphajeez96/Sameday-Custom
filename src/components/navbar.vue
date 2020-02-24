@@ -109,12 +109,12 @@ export default {
   
 }
 .guim{
-font-size: 1em;
+font-size: 1em !important;
 margin-left:10px;
 cursor:pointer
 }
 .gui{
-font-size: 1em;
+font-size: 1em !important;
 margin-left:6px;
 cursor:pointer;
 color:#007BFF
