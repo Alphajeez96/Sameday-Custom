@@ -114,7 +114,7 @@
        </v-layout>
    
        </v-layout>
-        <div>
+        <div  style="">
        <v-layout  row>
            <!-- <div style="color:grey"> -->
                <P>Product</P>
