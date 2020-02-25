@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Dashboard from '../views/Dashboard.vue'
 import Projects from '../views/Projects.vue'
 import Team from '../views/Team.vue'
+import Production from '../views/Production.vue'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,12 @@ const routes = [
       path:'/team',
       name:'team',
       component:Team
+    },
+
+    {
+      path:'/production',
+      name:'Production',
+      component:Production
     }
   
   

@@ -1,40 +1,28 @@
 <template>
   <div class="dashboard">
+      
    
      <v-container class="my-5">
        <v-layout row class="mb-3 mt-3 ml-4">
+
+           <v-btn class="" to="/" text icon color="#007BFF">
+        
+              <v-icon>mdi-arrow-left-bold-circle-outline</v-icon>
+            <span style="color: grey !important">Back</span>
+            </v-btn>
+               <!-- <v-divider height='2vh' vertical></v-divider> -->
+           
+             <v-img src="../../public/product (1).png" class="logo ml-5"></v-img>
          
-         
-             <v-img src="../../public/product (1).png" class="logo"></v-img>
-         
-          <h2 class="ml-4 mt-3">Production House</h2>
+          <h2 class="ml-3 mt-3">Production House</h2>
 
            <v-spacer></v-spacer>
 
-        <v-layout row class="mb-3 mt-3 ml-4">
-         
-             <!-- <v-img src="../../public/product (1).png" class="logo"></v-img> -->  
-      <v-btn
-     height="6vh"
-      color="#007BFF"
-      class="ma-2 white--text">
-      Categories
-      <v-icon class="guim" right dark>mdi-guitar-pick</v-icon>
-    </v-btn>
-         <v-text-field
-          class="se mt-2"
-           filled
-            solo
-            prepend-inner-icon="mdi-magnify"
-            dense
-            clearable
-            counter="15"
-            height="6vh"
-         
-           
-          ></v-text-field>
-          <!-- <h2 class="ml-4 mt-3">Production House</h2> -->
+        
        </v-layout>
+
+       <v-layout column class="ml-4">
+           <h5></h5>
        </v-layout>
 
         <v-layout row class="all ml-4">
@@ -102,25 +90,56 @@
  
     <template v-slot:item.calories="{ item }">
 
-      <v-btn to="/production" :color="getColor(item.calories)" dark>{{ item.calories }}</v-btn>
+      <v-btn to="" :color="getColor(item.calories)" dark>{{ item.calories }}</v-btn>
     </template>
 
     <template v-slot:item.carbs="{ item }">
 
-      <v-img style="cursor: pointer" class="carbimg" src="../../public/pocket-img.png" to="/production" :color="getColor(item.carbs)" dark>{{ item.carbs }}</v-img>
+      <v-img style="cursor: pointer" class="carbimg" src="../../public/pocket-img.png" to="" :color="getColor(item.carbs)" dark>{{ item.carbs }}</v-img>
     </template>
 
      <template v-slot:item.iron="{ item }">
 
-      <v-icon style="cursor: pointer" color="grey"   to="/production"  dark>{{ item.iron }}  </v-icon>
+      <v-icon style="cursor: pointer" color="grey"   to=""  dark>{{ item.iron }}  </v-icon>
     </template>
 
     
      <template v-slot:item.status="{ item }">
 
-      <p style="cursor: pointer; color: #009B2A;" to="/production"  dark>{{ item.status }}  </p>
+      <p style="cursor: pointer; color: #009B2A;" to=""  dark>{{ item.status }}  </p>
     </template>
   </v-data-table>
+
+
+         <v-card flat class="pa-3" v-for="blog in blogs" :key="blog.id" >
+           <v-layout row wrap :class="`pa-3 project ${blog.status}`">
+             <v-flex xs6 sm4 md6>
+               
+               <div class="caption grey--text pl-2 s "> Title</div>
+               <div class="pl-2"> {{ blog.title }} </div>
+               
+             </v-flex>
+             <v-flex xs6 sm4 md2>
+                <div class="caption grey--text">Author</div>
+                <div>{{ blog.person }}</div>
+             </v-flex>
+             <v-flex xs6 sm4 md2>
+                <div class="caption grey--text">Category</div>
+                <div> {{ blog.category}}</div>
+             </v-flex>
+             
+
+              <v-flex xs6 sm4 md2>
+                <div class="right"> 
+                 
+                 <v-btn text flat color="primary">Read more</v-btn>
+               </div>
+            
+             </v-flex>
+
+           </v-layout>
+           <v-divider></v-divider>
+         </v-card>
      
     </v-container>
     <!-- <sfoot></sfoot> -->

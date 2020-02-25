@@ -47,7 +47,7 @@
           
        </v-app-bar>
        <v-navigation-drawer  :mini-variant.sync="mini"
-      permanent app dark height="90vh" color="#007BFF" v-model="drawer">
+      permanent app dark height="90vh" color="#007BFF" overlay-color="red" v-model="drawer">
            <!-- <p>test</p> -->
            <v-app-bar-nav-icon v-if="mini"  class="white--text ml-5 mt-5" @click="drawer= !drawer" ></v-app-bar-nav-icon>
             <v-app-bar-nav-icon v-else class="white--text ml-5 mt-5"  @click.stop="mini = !mini"><v-icon >mdi-close</v-icon></v-app-bar-nav-icon>
@@ -83,6 +83,7 @@ export default {
   },
     data() {
         return{
+          
             drawer:false,
             item: 1,
       items: [
