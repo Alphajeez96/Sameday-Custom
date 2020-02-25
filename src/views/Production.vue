@@ -30,6 +30,8 @@
       
 
        <v-spacer></v-spacer>
+        <v-spacer class="ml-5"></v-spacer>
+         <v-spacer></v-spacer>
 
        <v-layout class="ml-5" row>
           <p style="color:#007BFF">Production Status <span style="color:green; font-size: 14px">Running 2 Of 4</span></p>
@@ -72,6 +74,7 @@
             </div>
 
             <v-spacer></v-spacer>
+             
 
               <v-layout row class="mb-3 mt-3 ml-4">
                    <v-btn
@@ -114,15 +117,73 @@
        </v-layout>
    
        </v-layout>
-        <div  style="">
-       <v-layout  row>
-           <!-- <div style="color:grey"> -->
-               <P>Product</P>
-               <v-spacer></v-spacer>
-               <v-btn outlined color="#007BFF">Download Artwork</v-btn>
-           <!-- </div> -->
-       </v-layout>
-    </div>
+        <v-layout row class="all ml-4">
+         
+          <!-- <div class="row"> -->
+          <h4 class="mt-5 ml-5" style="cursor: pointer">Product </h4>
+          
+        
+            <!-- </div> -->
+
+            <v-spacer></v-spacer>
+              <v-spacer></v-spacer>
+                <v-spacer></v-spacer>
+                  <v-spacer></v-spacer>
+                    <v-spacer></v-spacer>
+                      <v-spacer></v-spacer>
+             
+
+              <v-layout row class="mb-3 mt-3 ml-4">
+                   <v-btn
+      outlined
+     height="6vh"
+     color="green"
+      class=" ml-5 d dark--text">
+   Download Artwork
+      <v-icon class="guim" right dark>mdi-guitar-pick</v-icon>
+    </v-btn>
+              </v-layout>
+        </v-layout>
+
+
+
+        <v-row>
+    <v-col cols="12" sm="6" offset-sm="3">
+      <v-card>
+        <v-container fluid>
+          <v-row >
+            <v-col
+              v-for="n in 9"
+              :key="n"
+              class="d-flex child-flex"
+              cols="4"
+            >
+              <v-card flat tile class="d-flex">
+                <v-img
+                  :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
+                  :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+                  aspect-ratio="1"
+             
+                  class="grey lighten-2"
+                >
+                  <template v-slot:placeholder>
+                    <v-row
+                      class="fill-height ma-0"
+                      align="center"
+                      justify="center"
+                    >
+                      <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                    </v-row>
+                  </template>
+                </v-img>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-card>
+    </v-col>
+  </v-row>
+       
      <v-data-table
      
       item-key="name"
@@ -267,6 +328,9 @@ export default {
 
 </script>
 <style scoped>
+.d{
+    margin-left: 200px;
+}
 .carbimg{
   width:2vw;
   height: 5vh;
@@ -276,7 +340,7 @@ export default {
   /* padding-bottom: 90px; */
 }
 .all{
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 .se{
   cursor:pointer;
