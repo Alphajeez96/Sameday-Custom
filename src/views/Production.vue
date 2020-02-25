@@ -22,29 +22,75 @@
        </v-layout>
 
        <v-layout column class="ml-4">
-           <h5></h5>
+           <h5 style="font-type: Bold; font-size: 14px"> Order:#ADJ2322434D</h5>
        </v-layout>
+
+        <v-layout row class="ml-4">
+           <h6 style="color:#007BFF;">Account Setup >Delivery Method</h6>
+      
+
+       <v-spacer></v-spacer>
+
+       <v-layout class="ml-5" row>
+          <p style="color:#007BFF">Production Status <span style="color:green; font-size: 14px">Running 2 Of 4</span></p>
+       </v-layout>
+        </v-layout>
+
+        <v-layout row>
+            <v-card
+    class="mx-auto"
+    max-width="344"
+    Raised
+  >
+    <!-- <v-list-item three-line>
+      <v-list-item-content>
+        <div class="overline mb-4">OVERLINE</div>
+        <v-list-item-title class="headline mb-1">Headline 5</v-list-item-title>
+        <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
+      </v-list-item-content>
+
+      
+    </v-list-item> -->
+
+  
+  </v-card>
+        </v-layout>
 
         <v-layout row class="all ml-4">
          
           <div class="mt-4 row">
-          <h4 class="mt-5 ml-5" style="cursor: pointer">All productions</h4>
-           <span class="mx-3 mt-5" style="cursor:pointer">192</span>
+          <h4 class="mt-5 ml-5" style="cursor: pointer">Product Details</h4>
+           <!-- <span class="mx-3 mt-5" style="cursor:pointer">192</span> -->
            
        <v-divider inset class="mx-3" vertical></v-divider>
        <!-- <v-divider inset class="mx-3"></v-divider> -->
          
-          <h4 class="mt-5" style="cursor: pointer">Awaiting production</h4>
-           <span class="mx-3 mt-5" style="cursor:pointer">19</span>
+          <h4 class="mt-5" style="cursor: pointer">History/Notes</h4>
+           <!-- <span class="mx-3 mt-5" style="cursor:pointer">19</span> -->
          <v-divider class="mx-3" inset vertical></v-divider>
           
-          <h4 class="mt-5" style="cursor: pointer">Completed</h4>
-           <span class="mx-3 mt-5" style="cursor:pointer">192</span>
             </div>
 
             <v-spacer></v-spacer>
 
               <v-layout row class="mb-3 mt-3 ml-4">
+                   <v-btn
+      text
+     height="6vh"
+     color="green"
+      class="ma-2 dark--text">
+    Worksheet
+      <v-icon class="guim" right dark>mdi-guitar-pick</v-icon>
+    </v-btn>
+
+     <v-btn
+      Text
+     height="6vh"
+     color="grey"
+     class="ma-2 dark--text">
+      Print
+     
+    </v-btn>
          
              <!-- <v-img src="../../public/product (1).png" class="logo"></v-img> -->  
       <v-btn
@@ -52,31 +98,31 @@
      height="6vh"
      
       class="ma-2 dark--text">
-      Print Worksheet
+       <v-icon class="guim mr-2" right dark>mdi-file-outline</v-icon>
+      Add Notes
       
     </v-btn>
 
-     <v-btn
-      text
+      <v-btn
      height="6vh"
-      class="ma-2 dark--text">
-    Mark as Complete
+      color="#007BFF"
+      class="ma-2 white--text">
+      Complete Production
       <v-icon class="guim" right dark>mdi-guitar-pick</v-icon>
-    </v-btn>
-
-    <v-btn
-      Text
-     height="6vh"
-     color="grey"
-     class="ma-2 dark--text">
-      Save
-     
     </v-btn>
          
        </v-layout>
    
        </v-layout>
-
+        <div>
+       <v-layout  row>
+           <!-- <div style="color:grey"> -->
+               <P>Product</P>
+               <v-spacer></v-spacer>
+               <v-btn outlined color="#007BFF">Download Artwork</v-btn>
+           <!-- </div> -->
+       </v-layout>
+    </div>
      <v-data-table
      
       item-key="name"
